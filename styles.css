@@ -1,0 +1,130 @@
+/* roots  sets */
+:root {
+  /* colors */
+  --bgColor: #000;
+  --fontColor: #fff;
+  --hoverColor: #808080;
+}
+
+/* reset  sets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Sometype Mono", sans-serif;
+}
+/* body sets */
+body {
+  background-color: var(--bgColor);
+  color: var(--fontColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+/* nav bar sets */
+
+#header {
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+#main-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.left {
+  margin-right: auto;
+}
+.left a {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.right {
+  text-transform: uppercase;
+}
+
+#main-menu li a {
+  display: block;
+  color: var(--fontColor);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+#main-menu li a:hover {
+  color: var(--hoverColor);
+}
+
+/*  main container sets */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* 404 message sets */
+
+#message-404 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Go-Home link sets */
+#go-home-link {
+  margin: 40px 0;
+}
+#go-home-button {
+  font-size: 0.8rem;
+  border: 1px solid var(--hoverColor);
+  padding: 10px;
+  background-color: transparent;
+  color: var(--fontColor);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+#go-home-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 var(--hoverColor);
+}
+/* @media sets  */
+@media (max-width: 767px) {
+  #go-home-link {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    z-index: 1000;
+  }
+  #go-home-button {
+    border-radius: 15px;
+    padding: 15px;
+  }
+
+  .container {
+    padding-bottom: 80px;
+  }
+}
