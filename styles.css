@@ -65,9 +65,9 @@ body {
   text-decoration: none;
 }
 
-#main-menu li a:hover {
+/* #main-menu li a:hover {
   color: var(--hoverColor);
-}
+} */
 
 /*  main container sets */
 
@@ -110,6 +110,14 @@ body {
   box-shadow: 0 1px 0 var(--hoverColor);
 }
 /* @media sets  */
+
+/* hover effect only for mouse  */
+@media (hover: hover) {
+  #main-menu li a:hover {
+      color: var(--hoverColor);
+  }
+}
+
 @media (max-width: 767px) {
   #go-home-link {
     position: fixed;
